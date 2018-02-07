@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.victorardianto.myapplication.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:text="Some text"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.example.victorardianto.myapplication.widget.zoomable.ZoomableTwoDScrollFrameLayout
+            android:id="@+id/twoDScrollView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp">
+
+                <GridLayout
+                    android:id="@+id/gridlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                </GridLayout>
+
+        </com.example.victorardianto.myapplication.widget.zoomable.ZoomableTwoDScrollFrameLayout>
+
+        <!--<com.example.victorardianto.myapplication.widget.zoomable.ZoomLayout-->
+            <!--android:id="@+id/zoomLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:overScrollHorizontal="true"-->
+            <!--app:overScrollVertical="true"-->
+            <!--app:overPinchable="false"-->
+            <!--app:hasClickableChildren="true">-->
+
+            <!--<GridLayout-->
+                <!--android:id="@+id/gridlayout"-->
+                <!--android:background="@color/yellow"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"/>-->
+
+        <!--</com.example.victorardianto.myapplication.widget.zoomable.ZoomLayout>-->
+
+        <com.example.victorardianto.myapplication.widget.scroll.FakeScrollBar
+            android:id="@+id/fakeBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:elevation="10dp"/>
+    </FrameLayout>
+
+    <com.example.victorardianto.myapplication.widget.scroll.FakeHorizontalScrollBar
+        android:id="@+id/fakeHorBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"/>
+
+    <Button
+        android:id="@+id/buttonRestore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:text="Scroll"/>
+
+</LinearLayout>
