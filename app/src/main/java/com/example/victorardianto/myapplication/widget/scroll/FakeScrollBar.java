@@ -1,7 +1,5 @@
 package com.example.victorardianto.myapplication.widget.scroll;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -9,18 +7,13 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
 import android.widget.FrameLayout;
-
-import com.example.victorardianto.myapplication.R;
 
 /**
  * Created by victorardianto on 06/02/18.
  */
-
 public class FakeScrollBar extends FrameLayout {
 
     private View vView;
@@ -29,14 +22,32 @@ public class FakeScrollBar extends FrameLayout {
     private int contentHeight, scrollHeight;
     private float ratio;
 
+    /**
+     * Instantiates a new Fake scroll bar.
+     *
+     * @param context the context
+     */
     public FakeScrollBar(@NonNull Context context) {
         this(context, null);
     }
 
+    /**
+     * Instantiates a new Fake scroll bar.
+     *
+     * @param context the context
+     * @param attrs   the attrs
+     */
     public FakeScrollBar(@NonNull Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
+    /**
+     * Instantiates a new Fake scroll bar.
+     *
+     * @param context      the context
+     * @param attrs        the attrs
+     * @param defStyleAttr the def style attr
+     */
     public FakeScrollBar(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
@@ -69,11 +80,21 @@ public class FakeScrollBar extends FrameLayout {
         setTranslationY(0);
     }
 
+    /**
+     * Sets content height.
+     *
+     * @param height the height
+     */
     public void setContentHeight(int height) {
         contentHeight = height;
         updateScrollBar();
     }
 
+    /**
+     * Scroll.
+     *
+     * @param y the y
+     */
     public void scroll(int y) {
         vView.setVisibility(VISIBLE);
         if (ratio < 1) {

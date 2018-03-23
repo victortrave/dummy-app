@@ -13,7 +13,6 @@ import android.widget.Scroller;
 /**
  * Created by victorardianto on 31/01/18.
  */
-
 public class TwoDScrollFrameLayout extends FrameLayout {
 
     private float mLastMotionY;
@@ -23,21 +22,42 @@ public class TwoDScrollFrameLayout extends FrameLayout {
     private boolean mIsBeingDragged;
     private int mTouchSlop;
 
+    /**
+     * Instantiates a new Two d scroll frame layout.
+     *
+     * @param context the context
+     */
     public TwoDScrollFrameLayout(@NonNull Context context) {
         super(context);
         initTwoDScrollView();
     }
 
+    /**
+     * Instantiates a new Two d scroll frame layout.
+     *
+     * @param context the context
+     * @param attrs   the attrs
+     */
     public TwoDScrollFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initTwoDScrollView();
     }
 
+    /**
+     * Instantiates a new Two d scroll frame layout.
+     *
+     * @param context      the context
+     * @param attrs        the attrs
+     * @param defStyleAttr the def style attr
+     */
     public TwoDScrollFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initTwoDScrollView();
     }
 
+    /**
+     * Init two d scroll view.
+     */
     protected void initTwoDScrollView() {
         mScroller = new Scroller(getContext());
 

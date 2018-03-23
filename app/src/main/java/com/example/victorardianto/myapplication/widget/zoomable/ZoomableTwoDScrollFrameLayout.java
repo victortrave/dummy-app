@@ -18,10 +18,12 @@ import com.example.victorardianto.myapplication.widget.TwoDScrollFrameLayout;
 /**
  * Created by victorardianto on 02/02/18.
  */
-
 public class ZoomableTwoDScrollFrameLayout extends TwoDScrollFrameLayout {
 
     private final static String TAG = ZoomableTwoDScrollFrameLayout.class.getSimpleName();
+    /**
+     * The constant TWO_DSCROLL_VIEW_CAN_HOST_ONLY_ONE_DIRECT_CHILD.
+     */
     public static final String TWO_DSCROLL_VIEW_CAN_HOST_ONLY_ONE_DIRECT_CHILD = "TwoDScrollView can host only one direct child";
 
     private GestureDetector gestureDetector;
@@ -36,14 +38,32 @@ public class ZoomableTwoDScrollFrameLayout extends TwoDScrollFrameLayout {
     private float[] mMatrixValues = new float[9];
     private RectF mChildRect = new RectF();
 
+    /**
+     * Instantiates a new Zoomable two d scroll frame layout.
+     *
+     * @param context the context
+     */
     public ZoomableTwoDScrollFrameLayout(@NonNull Context context) {
         this(context, null);
     }
 
+    /**
+     * Instantiates a new Zoomable two d scroll frame layout.
+     *
+     * @param context the context
+     * @param attrs   the attrs
+     */
     public ZoomableTwoDScrollFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
+    /**
+     * Instantiates a new Zoomable two d scroll frame layout.
+     *
+     * @param context      the context
+     * @param attrs        the attrs
+     * @param defStyleAttr the def style attr
+     */
     public ZoomableTwoDScrollFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
@@ -166,20 +186,40 @@ public class ZoomableTwoDScrollFrameLayout extends TwoDScrollFrameLayout {
         return gestureDetector.onTouchEvent(event);
     }
 
+    /**
+     * Gets minimum scale.
+     *
+     * @return the minimum scale
+     */
     public float getMinimumScale() {
         return mMinimumScale;
     }
 
+    /**
+     * Gets maximum scale.
+     *
+     * @return the maximum scale
+     */
     public float getMaximumScale() {
         return mMaximumScale;
     }
 
+    /**
+     * Sets minimum scale.
+     *
+     * @param minimumScale the minimum scale
+     */
     public void setMinimumScale(float minimumScale) {
         if (minimumScale > 0 && minimumScale < mMaximumScale) {
             mMinimumScale = minimumScale;
         }
     }
 
+    /**
+     * Sets maximum scale.
+     *
+     * @param maximumScale the maximum scale
+     */
     public void setMaximumScale(float maximumScale) {
         if (maximumScale > mMinimumScale) {
             mMaximumScale = maximumScale;

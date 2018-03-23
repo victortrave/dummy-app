@@ -20,21 +20,57 @@ import com.example.victorardianto.myapplication.widget.zoomable.ZoomableTwoDScro
 import com.example.victorardianto.myapplication.widget.scroll.FakeHorizontalScrollBar;
 import com.example.victorardianto.myapplication.widget.scroll.FakeScrollBar;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
 
-    final int COLUMN = 10, ROW = 10;
+    /**
+     * The Column.
+     */
+    final int COLUMN = 10, /**
+     * The Row.
+     */
+    ROW = 10;
+    /**
+     * The Seat margin.
+     */
     final int SEAT_MARGIN = 40;
+    /**
+     * The Seat size.
+     */
     final int SEAT_SIZE = 120;
 
+    /**
+     * The Scale.
+     */
     float scale = 1f;
 
+    /**
+     * The Button restore.
+     */
     Button buttonRestore;
+    /**
+     * The Grid layout.
+     */
     GridLayout gridLayout;
 
+    /**
+     * The Two d scroll view.
+     */
     ZoomableTwoDScrollFrameLayout twoDScrollView;
+    /**
+     * The Zoom layout.
+     */
     ZoomLayout zoomLayout;
 
+    /**
+     * The M fake scroll bar.
+     */
     FakeScrollBar mFakeScrollBar;
+    /**
+     * The M fake horizontal scroll bar.
+     */
     FakeHorizontalScrollBar mFakeHorizontalScrollBar;
 
     @Override
