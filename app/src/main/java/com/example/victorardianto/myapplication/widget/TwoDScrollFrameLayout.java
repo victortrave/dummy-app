@@ -12,6 +12,7 @@ import android.widget.Scroller;
 
 /**
  * Created by victorardianto on 31/01/18.
+ * This is a class, you don't say
  */
 public class TwoDScrollFrameLayout extends FrameLayout {
 
