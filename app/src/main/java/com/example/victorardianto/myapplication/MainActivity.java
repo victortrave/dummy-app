@@ -160,4 +160,5 @@ public class MainActivity extends AppCompatActivity {
         background.setColor(cinemaSeat.getFillColor());
     }
 
+    // test
 }
